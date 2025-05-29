@@ -1,0 +1,186 @@
+#To check what all extensions are installed
+gayat@GSP-HP:~$ code --list-extensions
+Extensions installed on WSL: Ubuntu:
+gayat@GSP-HP:~$ code --list-extensions
+Extensions installed on WSL: Ubuntu:
+ms-python.debugpy
+ms-python.python
+ms-python.vscode-pylance
+ms-vscode.cpptools
+
+gayat@GSP-HP:~$ ls
+SummerInternship  snap  test123
+gayat@GSP-HP:~$ ls -a
+.              .bash_logout  .config     .motd_shown  .sudo_as_admin_successful  .wget-hsts        test123
+..             .bashrc       .dotnet     .pki         .vscode                    SummerInternship
+.bash_history  .cache        .landscape  .profile     .vscode-server             snap
+gayat@GSP-HP:~$ cd SummerInternship/
+gayat@GSP-HP:~/SummerInternship$ ls
+ 123.txt   5  'Untitled - Copy.txt:Zone.Identifier'   Untitled.txt   and   mouth,   test2705   time
+
+#Checking the editor that's running on the system on default
+gayat@GSP-HP:~/SummerInternship$ update-alternatives --config editor
+There are 4 choices for the alternative editor (providing /usr/bin/editor).
+
+  Selection    Path                Priority   Status
+------------------------------------------------------------
+* 0            /bin/nano            40        auto mode
+  1            /bin/ed             -100       manual mode
+  2            /bin/nano            40        manual mode
+  3            /usr/bin/vim.basic   30        manual mode
+  4            /usr/bin/vim.tiny    15        manual mode
+
+Press <enter> to keep the current choice[*], or type selection number: 
+
+#Using set -o to view all the options that is on or off
+gayat@GSP-HP:~/SummerInternship$ set -o
+allexport       off
+braceexpand     on
+emacs           on
+errexit         off
+errtrace        off
+functrace       off
+hashall         on
+histexpand      on
+history         on
+ignoreeof       off
+interactive-comments    on
+keyword         off
+monitor         on
+noclobber       off
+noexec          off
+noglob          off
+nolog           off
+notify          off
+nounset         off
+onecmd          off
+physical        off
+pipefail        off
+posix           off
+privileged      off
+verbose         off
+vi              off
+xtrace          off
+gayat@GSP-HP:~/SummerInternship$ set -o vi
+gayat@GSP-HP:~/SummerInternship$ set -o
+allexport       off
+braceexpand     on
+emacs           off
+errexit         off
+errtrace        off
+functrace       off
+hashall         on
+histexpand      on
+history         on
+ignoreeof       off
+interactive-comments    on
+keyword         off
+monitor         on
+noclobber       off
+noexec          off
+noglob          off
+nolog           off
+notify          off
+nounset         off
+onecmd          off
+physical        off
+pipefail        off
+posix           off
+privileged      off
+verbose         off
+vi              on
+xtrace          off
+
+#To see the history file, which contains the list of all the commands you did till then 
+
+cat .bash_history
+
+#To find something, say a command from the history list,
+gayat@GSP-HP:~$ cd ~
+gayat@GSP-HP:~$ pwd
+/home/gayat
+gayat@GSP-HP:~$ file .bash_history
+.bash_history: data
+gayat@GSP-HP:~$ strings .bash_history | grep "cd"
+cd home
+cd SummerInternship
+cd SummerInternship/
+cd SummerInternship/
+cd textfile.txt
+cd SummerInternship/
+cd file.c
+cd file.cexit
+cd SummerInternship/
+cd test/
+cd LAB RECORDS
+cd 'LAB RECORDS.docx'
+cd SummerInternship/
+cd test2705/
+cd ..
+cd SummerInternship/
+cd SummerInternship/
+cd SummerInternship/
+cd SummerInternship/
+cd test2705
+cd ~/SummerInternship/test2705/
+cd /SummerInternship
+cd/SummerInternship
+cd /SummerInternship
+cd SummerInternship
+cd /gayat/lib
+cd ..
+cd SummerInternship/
+cd test2705/
+cd ..
+cd SummerInternship/
+cd test2705/
+cd...
+cd ..
+cd SummerInternship/
+cd test2705/
+cd ....
+cd ..
+cd ..
+cd ..
+cd ..
+cd SummerInternship/
+cd ..
+cd ls
+cd home
+cd gayat/
+cd SummerInternship/
+cd test2705/
+cd ..
+cd ..
+cd ../gayat
+cd /gayat
+cd ~
+cd ~/SummerInternship/
+cd ..
+cd -
+cd ?.txt
+cd *?.txt
+cd prg.[a-c]
+cd 2{6,7,8}05
+cd ..
+cd SummerInternship/
+info cd
+help cd
+cd home 
+
+
+# to see the type of file the historyfile is.
+gayat@GSP-HP:~$ file .bash_history
+.bash_history: data
+
+#The action of Esc? gives the possible ending for the letter t
+gayat@GSP-HP:~/SummerInternship$ cd t
+test2705/ time
+
+#To get the next command on the history while ging to next line,ctrl+o
+
+gayat@GSP-HP:~/SummerInternship$ pwd   (ctrl+ o)
+/home/gayat/SummerInternship
+gayat@GSP-HP:~/SummerInternship$ cd SummerInternship/
+-bash: cd: SummerInternship/: No such file or directory
+gayat@GSP-HP:~/SummerInternship$ ls
